@@ -1,4 +1,66 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgb(238, 243, 230);
+@use './colors' as *;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #1b1b1b;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	display: flex;
+	align-items: center;
+	background-color: $white;
+	width: 100%;
+
+	.wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+        
+
+		.logo a {
+			text-decoration: none;
+			color: $darker;
+            padding: 2.5rem 3rem;
+            font-size: 3rem;
+            i {
+                color: $dark;
+            }
+		}
+
+	}
+}
+.nav {
+    display: none;
+}
+
+.burger-btn {
+    padding: 2.5rem 3rem;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: rgb(33, 33, 33);
+    cursor: pointer;
+}
+
+
+
+@import './small';
+@import './medium';
+@import './large';
