@@ -1,4 +1,5 @@
 @use './colors' as *;
+@use './mixins' as *;
 
 *,
 *::after,
@@ -14,51 +15,55 @@ html {
 }
 
 body {
-	font-size: 1.6rem;
 	font-family: 'Montserrat', sans-serif;
-	background-color: #1b1b1b;
 }
 
-header {
-	position: fixed;
-	top: 0;
-	display: flex;
-	align-items: center;
-	background-color: $white;
-	width: 100%;
+// ==========================================
+// HEADER & NAV
+// ==========================================
 
+header {
+	
 	.wrapper {
-		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-        
+		width: 100vw;
+		background-color: $white;
+		z-index: 10;
 
 		.logo a {
 			text-decoration: none;
 			color: $darker;
-            padding: 2.5rem 3rem;
-            font-size: 3rem;
-            i {
-                color: $dark;
-            }
+			padding: 2.5rem 3rem;
+			font-size: 2.5rem;
+			i {
+				color: $dark;
+			}
 		}
 
+		.burger-btn {
+			padding: 2.5rem 3rem;
+			background: none;
+			border: none;
+			font-size: 2.5rem;
+			color: $darker;
+			cursor: pointer;
+		}
+
+		.nav {
+			display: none;
+		}
 	}
 }
-.nav {
-    display: none;
-}
 
-.burger-btn {
-    padding: 2.5rem 3rem;
-    background: none;
-    border: none;
-    font-size: 3rem;
-    color: rgb(33, 33, 33);
-    cursor: pointer;
-}
 
+// ==========================================
+// FOREST SECTION
+// ==========================================
 
 
 @import './small';

@@ -1,0 +1,8 @@
+@use './colors' as *;
+
+@mixin Images($bgImg) {
+	background-image: $darkBg, url($bgImg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
