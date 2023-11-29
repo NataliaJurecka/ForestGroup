@@ -23,7 +23,6 @@ body {
 // ==========================================
 
 header {
-	
 	.wrapper {
 		position: fixed;
 		top: 0;
@@ -60,11 +59,40 @@ header {
 	}
 }
 
-
 // ==========================================
 // FOREST SECTION
 // ==========================================
 
+.forest {
+	.forest__box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		.forest__box-img {
+			img {
+				max-width: 100%;
+				height: auto;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				filter: brightness(50%);
+			}
+		}
+
+		.forest__box-text {
+			position: absolute;
+			top: 40%;
+			display: flex;
+			flex-direction: column;
+			justify-content: start;
+			margin: 40px;
+			color: $white;
+			font-size: 1.5rem;
+		}
+	}
+}
 
 @import './small';
 @import './medium';
