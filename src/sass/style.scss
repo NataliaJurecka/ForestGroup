@@ -105,29 +105,32 @@ header {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		
+
 		.section-title {
 			font-size: 2.5rem;
-	
 		}
-	
+
 		.about-us__box {
 			padding-top: 20px;
 			display: flex;
 			flex-direction: column;
-			justify-content: space-around;
+			justify-content: center;
 			align-items: center;
-			
+
 			&-img {
-				img{
-				width: 80vw;
-				height: auto;
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				img {
+					width: 80vw;
+					height: auto;
+					display: flex;
+					justify-content: center;
+					align-items: center;
 				}
 			}
 			&-text {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
 				padding-top: 20px;
 				width: 80vw;
 
@@ -137,10 +140,42 @@ header {
 				}
 				.about-us__text {
 					font-size: 1.4rem;
+					text-align: center;
 				}
-				
 			}
 		}
+	}
+}
+
+// ==========================================
+// HERO-IMG SECTION
+// ==========================================
+
+.hero-img {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 40px;
+	&__img {
+		width: 100vw;
+		height: 50vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		object-fit: cover;
+		object-position: center center;
+		filter: brightness(50%);
+	}
+	&__title {
+		position: absolute;
+		align-self: center;
+		padding: 20px;
+		color: $white;
+		font-size: 2rem;
+		border: 1px solid $white;
+		z-index: 5;
 	}
 }
 
